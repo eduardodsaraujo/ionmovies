@@ -19,6 +19,9 @@ page-home {
         }
     }
 
+    .swiper-slide img{
+        max-height: 500px !important;
+    }
     img-loader{
         img{
             width:150px;height:200px;
