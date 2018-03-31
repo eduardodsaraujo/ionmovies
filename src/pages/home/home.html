@@ -1,0 +1,34 @@
+<ion-header [elasticHeader]="myContent">
+  <ion-navbar color="dark">
+    <ion-title>Filmes em Cartaz</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding #myContent>
+  <ion-slides *ngIf="filmesCartaz && filmesCartaz.length" effect="flip" autoplayDisableOnInteraction="false" centeredSlides="true"
+    loop="true" style="margin-top:3.5em" autoplay="4000">
+    <ion-slide *ngFor="let filme of filmesCartaz" (tap)="abrirDetalhes(filme)">
+      <img [src]="'https://image.tmdb.org/t/p/w500/'+filme.poster_path" alt="">
+    </ion-slide>
+  </ion-slides>
+
+  <h5 style="margin-top:3em">Próximas Estréias</h5>
+  <ion-scroll scrollX="true" style="height:250px; white-space: nowrap;">
+    <a *ngFor="let filme of filmesNovos" (tap)="abrirDetalhes(filme)">
+      <img [src]="'https://image.tmdb.org/t/p/w500/'+filme.poster_path" alt="" style="width:150px;height:200px">
+    </a>
+
+  </ion-scroll>
+
+  <div *ngFor="let genero of generos">
+    <h5>{{ genero.name }}</h5>
+    <ion-scroll scrollX="true" style="height:250px; white-space: nowrap;">
+      <a *ngFor="let filme of mapGeneroFilmes.get(genero.id)" (tap)="abrirDetalhes(filme)">
+        <img [src]="'https://image.tmdb.org/t/p/w500/'+filme.poster_path" alt="" style="width:150px;height:200px">
+      </a>
+  
+    </ion-scroll>  
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,28 @@
+page-home {
+    background: black !important;
+    .swiper-container-3d {
+        -webkit-perspective: 400px;
+        perspective: 750px;
+    }
+
+    h2{
+        margin-bottom: 1em;
+    }
+    .swiper-container, ion-slides{
+        height: 400px;
+        position: static;
+    }
+
+    ion-scroll{
+        > .scroll-content{
+            padding:0px !important;
+        }
+    }
+
+    img-loader{
+        img{
+            width:150px;height:200px;
+        }
+    }
+    
+}

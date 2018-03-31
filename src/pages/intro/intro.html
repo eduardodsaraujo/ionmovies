@@ -1,0 +1,36 @@
+<ion-content>
+  <ion-slides pager>
+
+    <ion-slide>
+      <div class="skip" href="#" padding (tap)="goToTabsPage()"><sup>Skip >></sup></div>
+      <img src="assets/imgs/cine.jpg" class="fadeInLeftBig" alt="">
+      <div padding>
+        <h2>Bem-Vindo ao IonMovies</h2>
+        <p>Bem-vindo ao app IonMovies. Confira todas as infos de filmes e séries da atualidade.</p>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="intro-series" style="background:url('assets/imgs/movies.jpg') center no-repeat; background-size:cover;
+      height: 40vh;">
+
+      </div>
+      <div padding>
+        <h2>Filmes Populares</h2>
+        <p>Confira a lista dos filmes mais populares e suas avaliações.</p>
+      </div>
+      <div class="skip" href="#" padding (tap)="goToTabsPage()"><sup>Skip >></sup></div>
+    </ion-slide>
+    <ion-slide>
+      <div class="intro-series" style="background:url('assets/imgs/series.jpg') center no-repeat; background-size:cover;
+      height: 40vh;">
+
+      </div>
+      <div padding>
+        <h2>Séries Favoritas</h2>
+        <p>Venha descobrir sobre as melhores séries do momento.</p>
+        <div href="#" class="skip" padding (tap)="goToTabsPage()">Continue</div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

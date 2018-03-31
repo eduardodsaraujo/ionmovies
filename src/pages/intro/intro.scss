@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+page-intro {
+    .scroll-content{
+        padding-top: 0px !important;
+    }
+
+
+    ion-slides{
+        font-family: 'Dosis', sans-serif;
+        background: linear-gradient(135deg, #000, #6700ff); 
+        color: #ffffff;
+    
+        h2{
+            font-size: 1.5em;
+            font-weight: 800;
+            text-shadow: 2px 2px 2px rgb(0, 0, 0);
+        }
+        .skip{
+            position:absolute;
+            right: 0;
+            color: white;
+            text-decoration: overline !important;
+            font-weight: bold;
+            text-align: right;
+            display: block;
+            text-decoration: none;
+        }
+        p{
+            text-shadow: 2px 2px 2px rgb(0, 0, 0);
+        }
+        img{
+            border-radius: 30%;
+            min-height: 240px;
+        }
+        .swiper-pagination-bullet-active{
+            background: #af83f1;
+        }
+    }    
+}
+
+.box-shadow{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
