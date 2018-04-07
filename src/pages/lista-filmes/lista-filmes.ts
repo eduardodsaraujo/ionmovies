@@ -16,13 +16,13 @@ import { IonicPage } from 'ionic-angular/navigation/ionic-page';
       transition('* => *', [
         query(':leave', [
           style({transform: 'translateX(0)'}),
-          style({ opacity: 0 }),
-          animate('300ms', style({ opacity: 1, transform: 'translateX(-100%)' }))
+          style({ opacity: 1 }),
+          animate('500ms', style({ opacity: 0, transform: 'translateX(-100%)' }))
         ], { optional: true }),
         query(':enter', [
           style({transform: 'translateX(-100%)'}),
           style({ opacity: 0 }),
-          animate('500ms 1000ms', style({ opacity: 1, transform: 'translateX(0)' }))
+          animate('500ms', style({ opacity: 1, transform: 'translateX(0)' }))
         ], { optional: true })
       ])
         ])

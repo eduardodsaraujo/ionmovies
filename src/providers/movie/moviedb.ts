@@ -9,6 +9,12 @@ export class MoviedbProvider {
   constructor(public http: HttpClient) {
   }
 
+  buscarFilmes(query) {
+    return this.http.get(this.baseApiPath +
+      "/search/movie?api_key=aa53d1fadc595eac9265df956ad2a5dd&language=pt-BR&page=1&query=" + query
+    );
+  }
+
   getTrailer(movieId) {
     return this.http.get(this.baseApiPath +
       "/movie/" + movieId + "/videos?api_key=aa53d1fadc595eac9265df956ad2a5dd&language=pt-BR"

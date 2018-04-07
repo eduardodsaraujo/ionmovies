@@ -10,6 +10,7 @@ export class TabsPage {
   tab1Root = 'HomePage';
   tab2Root = 'ListaFilmesPage';
   tab3Root = 'ListaFilmesPage';
+  tab4Root = 'BuscaFilmesPage';
   tab2Params = { series: 1 };
 
   constructor() {

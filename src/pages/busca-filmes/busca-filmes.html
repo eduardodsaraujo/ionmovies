@@ -1,0 +1,19 @@
+<ion-header [elasticHeader]="myContent">
+  <ion-searchbar color="white" placeholder="Buscar Filmes" [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+
+</ion-header>
+
+<ion-content text-center fullscreen #myContent [@myAnimation]="lista_filmes?.length">
+  <ion-card *ngFor="let filme of lista_filmes" (tap)="abrirDetalhes(filme)" [ngStyle]="(filme.backdrop_path == null)?{}: {'background-image': 'url(https://image.tmdb.org/t/p/w500/' + 
+   filme.backdrop_path + ')', 'background-position' : 'center', 'background-repeat':'no-repeat', 'background-size':'cover'}">
+    <ion-card-header text-right>
+      <sup>{{ filme.release_date | date: 'dd-MM-yyyy' }}</sup>
+    </ion-card-header>
+    <div text-center>
+      <h2 *ngIf="filme.title" [ngStyle]="{'background-color': 'rgba(0, 0, 0, 0.61)' }">{{ filme.title }}</h2>
+      <h2 *ngIf="filme.original_name">{{ filme.name }}</h2>
+    </div>
+  </ion-card>
+</ion-content>

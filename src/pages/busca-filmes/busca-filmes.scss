@@ -1,0 +1,13 @@
+page-busca-filmes {
+    .searchbar-md .searchbar-input{
+        color: white;
+        background: mediumpurple;
+        font-weight: bold;
+    }
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: white !important;
+        opacity: 0.8; /* Firefox */
+    }
+    
+}

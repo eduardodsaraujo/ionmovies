@@ -14,13 +14,13 @@ export class MyApp {
     platform.ready().then(() => {
       this.rootPage = 'IntroPage';
       
-      //let slideIntro =  localStorage.getItem("slideIntro");
-      //if(slideIntro == null){
-      //  this.rootPage = 'IntroPage';
-      //  localStorage.setItem("slideIntro", "true");
-      //}else{
-      //  this.rootPage = 'TabsPage';
-      //}
+      let slideIntro =  localStorage.getItem("slideIntro");
+      if(slideIntro == null){
+        this.rootPage = 'IntroPage';
+        localStorage.setItem("slideIntro", "true");
+      }else{
+        this.rootPage = 'TabsPage';
+      }
 
 
       // Okay, so the platform is ready and our plugins are available.
